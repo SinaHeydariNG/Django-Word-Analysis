@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Count Page</h1>
+
+<a href="{% url 'main:home' %}">Go Back to HOME</a>
+
+<div class="countForm">
+<h3>your text has {{count}}  words</h3>
+
+<h1>Your original text</h1>
+<p>{{statement}}</p>
+
+{% for word , total in sortedwords %}
+
+<span>{{word}} --> {{total}}</span>
+<br/>
+{% endfor %}
+
+</div>
+
+{% endblock content %}

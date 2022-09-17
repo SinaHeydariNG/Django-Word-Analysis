@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Home Page</h1>
+
+
+<div class="countForm">
+
+<form action="{% url 'count:main' %}" method="GET">
+    {% csrf_token %}
+<textarea name="statement" id="" cols="30" rows="10"></textarea>
+<button type="submit">Submit</button>
+</form>
+</div>
+
+{% endblock content %}
